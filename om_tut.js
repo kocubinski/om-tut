@@ -3628,16 +3628,16 @@ cljs.core.fn_QMARK_ = function(a) {
 };
 cljs.core.with_meta = function with_meta(b, c) {
   return cljs.core.fn_QMARK_.call(null, b) && !(b ? b.cljs$lang$protocol_mask$partition0$ & 262144 || b.cljs$core$IWithMeta$ || (b.cljs$lang$protocol_mask$partition0$ ? 0 : cljs.core.native_satisfies_QMARK_.call(null, cljs.core.IWithMeta, b)) : cljs.core.native_satisfies_QMARK_.call(null, cljs.core.IWithMeta, b)) ? with_meta.call(null, function() {
-    "undefined" === typeof cljs.core.t9762 && (cljs.core.t9762 = function(b, c, f, g) {
+    "undefined" === typeof cljs.core.t5849 && (cljs.core.t5849 = function(b, c, f, g) {
       this.meta = b;
       this.o = c;
       this.with_meta = f;
-      this.meta9763 = g;
+      this.meta5850 = g;
       this.cljs$lang$protocol_mask$partition1$ = 0;
       this.cljs$lang$protocol_mask$partition0$ = 393217;
-    }, cljs.core.t9762.cljs$lang$type = !0, cljs.core.t9762.cljs$lang$ctorStr = "cljs.core/t9762", cljs.core.t9762.cljs$lang$ctorPrWriter = function(b, c, f) {
-      return cljs.core._write.call(null, c, "cljs.core/t9762");
-    }, cljs.core.t9762.prototype.call = function() {
+    }, cljs.core.t5849.cljs$lang$type = !0, cljs.core.t5849.cljs$lang$ctorStr = "cljs.core/t5849", cljs.core.t5849.cljs$lang$ctorPrWriter = function(b, c, f) {
+      return cljs.core._write.call(null, c, "cljs.core/t5849");
+    }, cljs.core.t5849.prototype.call = function() {
       var b = function(b, c) {
         return cljs.core.apply.call(null, b.o, c);
       }, c = function(c, e) {
@@ -3654,9 +3654,9 @@ cljs.core.with_meta = function with_meta(b, c) {
       };
       c.cljs$core$IFn$_invoke$arity$variadic = b;
       return c;
-    }(), cljs.core.t9762.prototype.apply = function(b, c) {
+    }(), cljs.core.t5849.prototype.apply = function(b, c) {
       return this.call.apply(this, [this].concat(cljs.core.aclone.call(null, c)));
-    }, cljs.core.t9762.prototype.cljs$core$IFn$_invoke$arity$2 = function() {
+    }, cljs.core.t5849.prototype.cljs$core$IFn$_invoke$arity$2 = function() {
       var b = function(b) {
         return cljs.core.apply.call(null, self__.o, b);
       }, c = function(c) {
@@ -3671,14 +3671,14 @@ cljs.core.with_meta = function with_meta(b, c) {
       };
       c.cljs$core$IFn$_invoke$arity$variadic = b;
       return c;
-    }(), cljs.core.t9762.prototype.cljs$core$Fn$ = !0, cljs.core.t9762.prototype.cljs$core$IMeta$_meta$arity$1 = function(b) {
-      return this.meta9763;
-    }, cljs.core.t9762.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(b, c) {
-      return new cljs.core.t9762(this.meta, this.o, this.with_meta, c);
-    }, cljs.core.__GT_t9762 = function(b, c, f, g) {
-      return new cljs.core.t9762(b, c, f, g);
+    }(), cljs.core.t5849.prototype.cljs$core$Fn$ = !0, cljs.core.t5849.prototype.cljs$core$IMeta$_meta$arity$1 = function(b) {
+      return this.meta5850;
+    }, cljs.core.t5849.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(b, c) {
+      return new cljs.core.t5849(this.meta, this.o, this.with_meta, c);
+    }, cljs.core.__GT_t5849 = function(b, c, f, g) {
+      return new cljs.core.t5849(b, c, f, g);
     });
-    return new cljs.core.t9762(c, b, with_meta, null);
+    return new cljs.core.t5849(c, b, with_meta, null);
   }(), c) : null == b ? null : cljs.core._with_meta.call(null, b, c);
 };
 cljs.core.meta = function(a) {
@@ -24248,11 +24248,65 @@ clojure.browser.repl.connect = function(a) {
 };
 var om_tut = {core:{}};
 cljs.core.enable_console_print_BANG_.call(null);
-om_tut.core.app_state = cljs.core.atom.call(null, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "text", "text", 1017460895), "Hello world!"], null));
-om_tut.core.run = function(a) {
-  return om.core.root.call(null, function(a, c) {
-    return React.DOM.h1(null, (new cljs.core.Keyword(null, "text", "text", 1017460895)).cljs$core$IFn$_invoke$arity$1(a));
-  }, om_tut.core.app_state, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "target", "target", 4427965699), document.getElementById(a)], null));
+om_tut.core.app_state = cljs.core.atom.call(null, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "contacts", "contacts", 4741419973), new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "first", "first", 1111344674), "Ben", new cljs.core.Keyword(null, "last", "last", 1017218568), "Bitdiddle", new cljs.core.Keyword(null, "email", "email", 1110523662), "benb@mit.edu"], null), 
+new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null, "first", "first", 1111344674), "Alyssa", new cljs.core.Keyword(null, "middle-initial", "middle-initial", 2869404286), "P", new cljs.core.Keyword(null, "last", "last", 1017218568), "Hacker", new cljs.core.Keyword(null, "email", "email", 1110523662), "aphacker@mit.edu"], null), new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null, "first", "first", 1111344674), "Eva", new cljs.core.Keyword(null, "middle", "middle", 
+4234530055), "Lu", new cljs.core.Keyword(null, "last", "last", 1017218568), "Ator", new cljs.core.Keyword(null, "email", "email", 1110523662), "eval@mit.edu"], null), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "first", "first", 1111344674), "Louis", new cljs.core.Keyword(null, "last", "last", 1017218568), "Reasoner", new cljs.core.Keyword(null, "email", "email", 1110523662), "prolog@mit.edu"], null), new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null, 
+"first", "first", 1111344674), "Cy", new cljs.core.Keyword(null, "middle-initial", "middle-initial", 2869404286), "D", new cljs.core.Keyword(null, "last", "last", 1017218568), "Effect", new cljs.core.Keyword(null, "email", "email", 1110523662), "bugs@mit.edu"], null), new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null, "first", "first", 1111344674), "Lem", new cljs.core.Keyword(null, "middle-initial", "middle-initial", 2869404286), "E", new cljs.core.Keyword(null, "last", "last", 
+1017218568), "Tweakit", new cljs.core.Keyword(null, "email", "email", 1110523662), "morebugs@mit.edu"], null)], null)], null));
+om_tut.core.middle_name = function(a) {
+  var b = cljs.core.seq_QMARK_.call(null, a) ? cljs.core.apply.call(null, cljs.core.hash_map, a) : a;
+  a = cljs.core.get.call(null, b, new cljs.core.Keyword(null, "middle-initial", "middle-initial", 2869404286));
+  b = cljs.core.get.call(null, b, new cljs.core.Keyword(null, "middle", "middle", 4234530055));
+  return cljs.core.truth_(b) ? " " + cljs.core.str.cljs$core$IFn$_invoke$arity$1(b) : cljs.core.truth_(a) ? " " + cljs.core.str.cljs$core$IFn$_invoke$arity$1(a) + "." : null;
 };
-om_tut.core.run.call(null, "app0");
-om_tut.core.run.call(null, "app1");
+om_tut.core.display_name = function(a) {
+  a = cljs.core.seq_QMARK_.call(null, a) ? cljs.core.apply.call(null, cljs.core.hash_map, a) : a;
+  var b = cljs.core.get.call(null, a, new cljs.core.Keyword(null, "last", "last", 1017218568)), c = cljs.core.get.call(null, a, new cljs.core.Keyword(null, "first", "first", 1111344674));
+  return "" + cljs.core.str.cljs$core$IFn$_invoke$arity$1(b) + ", " + cljs.core.str.cljs$core$IFn$_invoke$arity$1(c) + cljs.core.str.cljs$core$IFn$_invoke$arity$1(om_tut.core.middle_name.call(null, a));
+};
+om_tut.core.contact_view = function contact_view(b, c) {
+  "undefined" === typeof om_tut.core.t6991 && (om_tut.core.t6991 = function(b, c, f, g) {
+    this.owner = b;
+    this.contact = c;
+    this.contact_view = f;
+    this.meta6992 = g;
+    this.cljs$lang$protocol_mask$partition1$ = 0;
+    this.cljs$lang$protocol_mask$partition0$ = 393216;
+  }, om_tut.core.t6991.cljs$lang$type = !0, om_tut.core.t6991.cljs$lang$ctorStr = "om-tut.core/t6991", om_tut.core.t6991.cljs$lang$ctorPrWriter = function(b, c, f) {
+    return cljs.core._write.call(null, c, "om-tut.core/t6991");
+  }, om_tut.core.t6991.prototype.om$core$IRender$ = !0, om_tut.core.t6991.prototype.om$core$IRender$render$arity$1 = function(b) {
+    return React.DOM.li(null, om_tut.core.display_name.call(null, this.contact));
+  }, om_tut.core.t6991.prototype.cljs$core$IMeta$_meta$arity$1 = function(b) {
+    return this.meta6992;
+  }, om_tut.core.t6991.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(b, c) {
+    return new om_tut.core.t6991(this.owner, this.contact, this.contact_view, c);
+  }, om_tut.core.__GT_t6991 = function(b, c, f, g) {
+    return new om_tut.core.t6991(b, c, f, g);
+  });
+  return new om_tut.core.t6991(c, b, contact_view, null);
+};
+om_tut.core.contacts_view = function contacts_view(b, c) {
+  "undefined" === typeof om_tut.core.t6997 && (om_tut.core.t6997 = function(b, c, f, g) {
+    this.owner = b;
+    this.app = c;
+    this.contacts_view = f;
+    this.meta6998 = g;
+    this.cljs$lang$protocol_mask$partition1$ = 0;
+    this.cljs$lang$protocol_mask$partition0$ = 393216;
+  }, om_tut.core.t6997.cljs$lang$type = !0, om_tut.core.t6997.cljs$lang$ctorStr = "om-tut.core/t6997", om_tut.core.t6997.cljs$lang$ctorPrWriter = function(b, c, f) {
+    return cljs.core._write.call(null, c, "om-tut.core/t6997");
+  }, om_tut.core.t6997.prototype.om$core$IRender$ = !0, om_tut.core.t6997.prototype.om$core$IRender$render$arity$1 = function(b) {
+    return React.DOM.div(null, React.DOM.h2(null, "Contact list"), cljs.core.apply.call(null, om.dom.ul, null, om.core.build_all.call(null, om_tut.core.contact_view, (new cljs.core.Keyword(null, "contacts", "contacts", 4741419973)).cljs$core$IFn$_invoke$arity$1(this.app))));
+  }, om_tut.core.t6997.prototype.cljs$core$IMeta$_meta$arity$1 = function(b) {
+    return this.meta6998;
+  }, om_tut.core.t6997.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(b, c) {
+    return new om_tut.core.t6997(this.owner, this.app, this.contacts_view, c);
+  }, om_tut.core.__GT_t6997 = function(b, c, f, g) {
+    return new om_tut.core.t6997(b, c, f, g);
+  });
+  return new om_tut.core.t6997(c, b, contacts_view, null);
+};
+om_tut.core.run = function(a) {
+  return om.core.root.call(null, om_tut.core.contacts_view, om_tut.core.app_state, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "target", "target", 4427965699), document.getElementById(a)], null));
+};
+om_tut.core.run.call(null, "contacts");
