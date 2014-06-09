@@ -24249,8 +24249,10 @@ clojure.browser.repl.connect = function(a) {
 var om_tut = {core:{}};
 cljs.core.enable_console_print_BANG_.call(null);
 om_tut.core.app_state = cljs.core.atom.call(null, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "text", "text", 1017460895), "Hello world!"], null));
-om_tut.core.run = function() {
-  return om.core.root.call(null, function(a, b) {
+om_tut.core.run = function(a) {
+  return om.core.root.call(null, function(a, c) {
     return React.DOM.h1(null, (new cljs.core.Keyword(null, "text", "text", 1017460895)).cljs$core$IFn$_invoke$arity$1(a));
-  }, om_tut.core.app_state, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "target", "target", 4427965699), document.getElementById("app")], null));
+  }, om_tut.core.app_state, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "target", "target", 4427965699), document.getElementById(a)], null));
 };
+om_tut.core.run.call(null, "app0");
+om_tut.core.run.call(null, "app1");

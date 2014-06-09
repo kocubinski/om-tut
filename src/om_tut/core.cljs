@@ -7,9 +7,12 @@
 
 (def app-state (atom {:text "Hello world!"}))
 
-(defn run []
+(defn run [elem-id]
   (om/root
    (fn [app owner]
      (dom/h1 nil (:text app)))
    app-state
-   {:target (. js/document (getElementById "app"))}))
+   {:target (. js/document (getElementById elem-id))}))
+
+(run "app0")
+(run "app1")
