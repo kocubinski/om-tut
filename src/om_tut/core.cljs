@@ -32,7 +32,8 @@
       (dom/li
        nil
        (dom/span nil (display-name contact))
-       (dom/button #js {:onClick (fn [e] (put! delete contact))} "Delete")))))
+       ;; must deref this cursor (contact) before stuffing it into the async channel
+       (dom/button #js {:onClick (fn [e] (put! delete @contact))} "Delete")))))
 
 (defn contacts-view [app owner]
   (reify
