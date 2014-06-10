@@ -36,7 +36,7 @@
                         .-value
                         parse-contact)]
     (when new-contact
-      (set! (.-value contact-node) "")
+      (om/set-state! owner :text "")
       (om/transact! app :contacts #(conj % new-contact)))))
 
 (defn middle-name [{:keys [middle middle-initial]}]
@@ -57,11 +57,24 @@
        ;; must deref this cursor (contact) before stuffing it into the async channel
        (dom/button #js {:onClick (fn [e] (put! delete @contact))} "Delete")))))
 
+(defn handle-change [e owner {:keys [text]}]
+  ;; typical properties available in event args.
+  ;; set-state! on owner's state.
+  (let [value (.. e -target -value)]
+    ;; if we don't find a number..
+    (if-not (re-find #"[0-9]" value)
+      ;; proceed..
+      (om/set-state! owner :text value)
+      ;; otherwise, disallow! use last text as value.
+      (om/set-state! owner :text text))))
+
 (defn contacts-view [app owner]
   (reify
+    ;; creates a local state?
     om/IInitState
     (init-state [_]
-      {:delete (chan)})
+      {:delete (chan)
+       :text ""})
     om/IWillMount
     (will-mount [_]
       (let [delete (om/get-state owner :delete)]
@@ -76,10 +89,11 @@
                (dom/h2 nil "Contact list")
                (apply dom/ul nil
                       (om/build-all contact-view (:contacts app)
-                                    ;; pass the delete channel we created to contact-view
+                                    ;; pass the delete channel we created to contact view
                                     {:init-state state}))
                (dom/div nil
-                        (dom/input #js {:type "text" :ref "new-contact"})
+                        (dom/input #js {:type "text" :ref "new-contact" :value (:text state)
+                                        :onChange #(handle-change % owner state)})
                         (dom/button #js {:onClick #(add-contact app owner)} "Add contact"))))))
 
 (defn run [elem-id]
