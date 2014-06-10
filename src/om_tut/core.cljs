@@ -100,4 +100,5 @@
   (om/root contacts-view app-state
    {:target (. js/document (getElementById elem-id))}))
 
-(run "contacts")
+;;(run "contacts")
+
